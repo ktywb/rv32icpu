@@ -1,0 +1,2042 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version H-2013.03-SP2 for RHEL64 -- Jun 03, 2013
+               Copyright (c) 1988-2013 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+set search_path [concat "/usr/local/lib/hit18-lib/kyoto_lib/synopsys/" $search_path]
+/usr/local/lib/hit18-lib/kyoto_lib/synopsys/ . /usr/synopsys/H-2013.03-SP2/libraries/syn /usr/synopsys/H-2013.03-SP2/minpower/syn /usr/synopsys/H-2013.03-SP2/dw/syn_ver /usr/synopsys/H-2013.03-SP2/dw/sim_ver
+set LIB_MAX_FILE {HIT018.db}
+HIT018.db
+set link_library $LIB_MAX_FILE
+HIT018.db
+set target_library $LIB_MAX_FILE
+HIT018.db
+##read_verilog module
+read_verilog regfile.v
+Loading db file '/usr/local/lib/hit18-lib/kyoto_lib/synopsys/HIT018.db'
+Loading db file '/usr/synopsys/H-2013.03-SP2/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/H-2013.03-SP2/libraries/syn/standard.sldb'
+  Loading link library 'HIT018'
+  Loading link library 'gtech'
+Loading verilog file '/home/mclyu/test/t2/regfile.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/regfile.v
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/Regfile.db:Regfile'
+Loaded 1 design.
+Current design is 'Regfile'.
+Regfile
+read_verilog decoder.v
+Loading verilog file '/home/mclyu/test/t2/decoder.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/decoder.v
+Opening include file defines.v
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/Decoder.db:Decoder'
+Loaded 1 design.
+Current design is 'Decoder'.
+Decoder
+read_verilog defines.v
+Loading verilog file '/home/mclyu/test/t2/defines.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /home/mclyu/test/t2/defines.v
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+No designs were read
+read_verilog ex2mem.v
+Loading verilog file '/home/mclyu/test/t2/ex2mem.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/ex2mem.v
+Opening include file defines.v
+
+Inferred memory devices in process
+	in routine EX2MEM line 47 in file
+		'/home/mclyu/test/t2/ex2mem.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|  mem_write_ctrl_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       fcC_o_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     wr_width_o_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+| alu_dataCaddress_o_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      w_data_o_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg        | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    reg_w_ctrl_o_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  mem_read_ctrl_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/EX2MEM.db:EX2MEM'
+Loaded 1 design.
+Current design is 'EX2MEM'.
+EX2MEM
+read_verilog ex_alu.v
+Loading verilog file '/home/mclyu/test/t2/ex_alu.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file defines.v
+Opening include file calcu.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/ex_alu.v
+Opening include file defines.v
+Opening include file calcu.v
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PA4.db:PA4'
+Loaded 5 designs.
+Current design is 'PA4'.
+PA4 adder32 Ex_alu Shifter Adder
+read_verilog calcu.v
+Loading verilog file '/home/mclyu/test/t2/calcu.v'
+Detecting input file type automatically (-rtl or -netlist).
+Warning: Overwriting design file '/home/mclyu/test/t2/PA4'. (DDB-24)
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/calcu.v
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PA4.db:PA4'
+Warning: Overwriting design file '/home/mclyu/test/t2/adder32.db'. (DDB-24)
+Loaded 2 designs.
+Current design is 'PA4'.
+PA4 adder32
+read_verilog calcu2.v
+Loading verilog file '/home/mclyu/test/t2/calcu2.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/calcu2.v
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PA42.db:PA42'
+Loaded 2 designs.
+Current design is 'PA42'.
+PA42 adder322
+read_verilog id2ex.v
+Loading verilog file '/home/mclyu/test/t2/id2ex.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/id2ex.v
+Opening include file defines.v
+
+Inferred memory devices in process
+	in routine ID2EX line 158 in file
+		'/home/mclyu/test/t2/id2ex.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|    typeb_pc_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     pc_wb_or_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  b_flag_cache_or_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    wr_width_or_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|  regalu_dataA_or_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   reg_dataB_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   imm_exten_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       rd_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs1_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs2_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     jjruF_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   reg_w_ctrl_or_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| reg_w_data_sel_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_read_ctrl_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_write_ctrl_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    alu_ctrl_or_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| alu_dataB_sel_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| load_bneq_sig_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    bneqFlag_or_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     fcDbneq_o_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/ID2EX.db:ID2EX'
+Loaded 1 design.
+Current design is 'ID2EX'.
+ID2EX
+read_verilog if2id.v
+Loading verilog file '/home/mclyu/test/t2/if2id.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/if2id.v
+Opening include file defines.v
+
+Inferred memory devices in process
+	in routine IF2IDWithStall line 81 in file
+		'/home/mclyu/test/t2/if2id.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fcD_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      b2_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    pc_out_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_or_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   is_jjru_or_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/IF2IDWithStall.db:IF2IDWithStall'
+Loaded 1 design.
+Current design is 'IF2IDWithStall'.
+IF2IDWithStall
+read_verilog mem2wb.v
+Loading verilog file '/home/mclyu/test/t2/mem2wb.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/mem2wb.v
+Opening include file defines.v
+
+Inferred memory devices in process
+	in routine MEM2WB line 35 in file
+		'/home/mclyu/test/t2/mem2wb.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|    reg_w_ctrl_o_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_data_o_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| r_data_o_tri_enable_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     alu_dataC_o_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg         | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred tri-state devices in process
+	in routine MEM2WB line 35 in file
+		'/home/mclyu/test/t2/mem2wb.v'.
+=================================================
+| Register Name |       Type       | Width | MB |
+=================================================
+| r_data_o_tri  | Tri-State Buffer |  32   | N  |
+=================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/MEM2WB.db:MEM2WB'
+Loaded 1 design.
+Current design is 'MEM2WB'.
+MEM2WB
+read_verilog other_modules.v
+Loading verilog file '/home/mclyu/test/t2/other_modules.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file calcu2.v
+Warning: Overwriting design file '/home/mclyu/test/t2/PA42'. (DDB-24)
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/other_modules.v
+Opening include file calcu2.v
+
+Inferred memory devices in process
+	in routine IRS line 13 in file
+		'/home/mclyu/test/t2/other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     in_dly_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RegCondRster line 358 in file
+		'/home/mclyu/test/t2/other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     times_r_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 511 in file
+		'/home/mclyu/test/t2/other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       num_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       num_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 521 in file
+		'/home/mclyu/test/t2/other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pulse2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PA42.db:PA42'
+Warning: Overwriting design file '/home/mclyu/test/t2/adder322.db'. (DDB-24)
+Loaded 18 designs.
+Current design is 'PA42'.
+PA42 adder322 IRS Mux Mux5 Mux1 Mux31 Add Judger I_mem D_mem JJrUJudger BranchJudger RegCondRster FwdCtrler EqJduger JBHandler EdgeDetector
+read_verilog pc_reg.v
+Loading verilog file '/home/mclyu/test/t2/pc_reg.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/pc_reg.v
+Opening include file defines.v
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 66 in file
+		'/home/mclyu/test/t2/pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pc_out_T_reg     | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    pc_out_T_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 80 in file
+		'/home/mclyu/test/t2/pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pc_out__reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PcRegWithStall.db:PcRegWithStall'
+Loaded 2 designs.
+Current design is 'PcRegWithStall'.
+PcRegWithStall StallMux
+read_verilog rf32x32.v
+Loading verilog file '/home/mclyu/test/t2/rf32x32.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file regfile.v
+Warning: Overwriting design file '/home/mclyu/test/t2/Regfile'. (DDB-24)
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/rf32x32.v
+Opening include file regfile.v
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/Regfile.db:Regfile'
+Loaded 2 designs.
+Current design is 'Regfile'.
+Regfile rf32x32
+read_verilog ppl_datapath_test.v
+Loading verilog file '/home/mclyu/test/t2/ppl_datapath_test.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file pc_reg.v
+Opening include file defines.v
+Warning: Overwriting design file '/home/mclyu/test/t2/PcRegWithStall'. (DDB-24)
+Opening include file decoder.v
+Opening include file defines.v
+Opening include file other_modules.v
+Opening include file calcu2.v
+Opening include file if2id.v
+Opening include file defines.v
+Opening include file id2ex.v
+Opening include file defines.v
+Opening include file ex2mem.v
+Opening include file defines.v
+Opening include file mem2wb.v
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/ppl_datapath_test.v
+Opening include file pc_reg.v
+Opening include file defines.v
+Opening include file decoder.v
+Opening include file defines.v
+Opening include file other_modules.v
+Opening include file calcu2.v
+Opening include file if2id.v
+Opening include file defines.v
+Opening include file id2ex.v
+Opening include file defines.v
+Opening include file ex2mem.v
+Opening include file defines.v
+Opening include file mem2wb.v
+Opening include file defines.v
+Opening include file rf32x32.v
+Opening include file regfile.v
+Opening include file ex_alu.v
+Opening include file defines.v
+Opening include file calcu.v
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 66 in file
+		'pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pc_out_T_reg     | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    pc_out_T_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 80 in file
+		'pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pc_out__reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IRS line 13 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     in_dly_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RegCondRster line 358 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     times_r_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 511 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       num_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       num_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 521 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pulse2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IF2IDWithStall line 81 in file
+		'if2id.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fcD_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      b2_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    pc_out_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_or_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   is_jjru_or_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ID2EX line 158 in file
+		'id2ex.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|    typeb_pc_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     pc_wb_or_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  b_flag_cache_or_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    wr_width_or_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|  regalu_dataA_or_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   reg_dataB_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   imm_exten_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       rd_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs1_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs2_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     jjruF_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   reg_w_ctrl_or_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| reg_w_data_sel_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_read_ctrl_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_write_ctrl_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    alu_ctrl_or_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| alu_dataB_sel_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| load_bneq_sig_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    bneqFlag_or_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     fcDbneq_o_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine EX2MEM line 47 in file
+		'ex2mem.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|  mem_write_ctrl_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       fcC_o_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     wr_width_o_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+| alu_dataCaddress_o_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      w_data_o_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg        | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    reg_w_ctrl_o_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  mem_read_ctrl_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine MEM2WB line 35 in file
+		'mem2wb.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|    reg_w_ctrl_o_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_data_o_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| r_data_o_tri_enable_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     alu_dataC_o_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg         | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred tri-state devices in process
+	in routine MEM2WB line 35 in file
+		'mem2wb.v'.
+=================================================
+| Register Name |       Type       | Width | MB |
+=================================================
+| r_data_o_tri  | Tri-State Buffer |  32   | N  |
+=================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PcRegWithStall.db:PcRegWithStall'
+Warning: Overwriting design file '/home/mclyu/test/t2/StallMux.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Decoder.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/PA42.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/adder322.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/IRS.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux5.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux1.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux31.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Add.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Judger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/I_mem.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/D_mem.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/JJrUJudger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/BranchJudger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/RegCondRster.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/FwdCtrler.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EqJduger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/JBHandler.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EdgeDetector.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/IF2IDWithStall.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/ID2EX.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EX2MEM.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/MEM2WB.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Regfile.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/rf32x32.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/PA4.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/adder32.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Ex_alu.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Shifter.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Adder.db'. (DDB-24)
+Loaded 33 designs.
+Current design is 'PcRegWithStall'.
+PcRegWithStall StallMux Decoder PA42 adder322 IRS Mux Mux5 Mux1 Mux31 Add Judger I_mem D_mem JJrUJudger BranchJudger RegCondRster FwdCtrler EqJduger JBHandler EdgeDetector IF2IDWithStall ID2EX EX2MEM MEM2WB Regfile rf32x32 PA4 adder32 Ex_alu Shifter Adder PplDatapathTest
+read_verilog includes.v
+Loading verilog file '/home/mclyu/test/t2/includes.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file pc_reg.v
+Opening include file defines.v
+Warning: Overwriting design file '/home/mclyu/test/t2/PcRegWithStall'. (DDB-24)
+Opening include file decoder.v
+Opening include file defines.v
+Opening include file other_modules.v
+Opening include file calcu2.v
+Opening include file if2id.v
+Opening include file defines.v
+Opening include file id2ex.v
+Opening include file defines.v
+Opening include file ex2mem.v
+Opening include file defines.v
+Opening include file mem2wb.v
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/includes.v
+Opening include file pc_reg.v
+Opening include file defines.v
+Opening include file decoder.v
+Opening include file defines.v
+Opening include file other_modules.v
+Opening include file calcu2.v
+Opening include file if2id.v
+Opening include file defines.v
+Opening include file id2ex.v
+Opening include file defines.v
+Opening include file ex2mem.v
+Opening include file defines.v
+Opening include file mem2wb.v
+Opening include file defines.v
+Opening include file rf32x32.v
+Opening include file regfile.v
+Opening include file ex_alu.v
+Opening include file defines.v
+Opening include file calcu.v
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 66 in file
+		'pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pc_out_T_reg     | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    pc_out_T_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 80 in file
+		'pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pc_out__reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IRS line 13 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     in_dly_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RegCondRster line 358 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     times_r_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 511 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       num_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       num_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 521 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pulse2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IF2IDWithStall line 81 in file
+		'if2id.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fcD_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      b2_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    pc_out_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_or_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   is_jjru_or_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ID2EX line 158 in file
+		'id2ex.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|    typeb_pc_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     pc_wb_or_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  b_flag_cache_or_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    wr_width_or_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|  regalu_dataA_or_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   reg_dataB_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   imm_exten_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       rd_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs1_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs2_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     jjruF_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   reg_w_ctrl_or_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| reg_w_data_sel_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_read_ctrl_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_write_ctrl_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    alu_ctrl_or_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| alu_dataB_sel_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| load_bneq_sig_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    bneqFlag_or_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     fcDbneq_o_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine EX2MEM line 47 in file
+		'ex2mem.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|  mem_write_ctrl_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       fcC_o_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     wr_width_o_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+| alu_dataCaddress_o_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      w_data_o_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg        | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    reg_w_ctrl_o_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  mem_read_ctrl_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine MEM2WB line 35 in file
+		'mem2wb.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|    reg_w_ctrl_o_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_data_o_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| r_data_o_tri_enable_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     alu_dataC_o_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg         | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred tri-state devices in process
+	in routine MEM2WB line 35 in file
+		'mem2wb.v'.
+=================================================
+| Register Name |       Type       | Width | MB |
+=================================================
+| r_data_o_tri  | Tri-State Buffer |  32   | N  |
+=================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PcRegWithStall.db:PcRegWithStall'
+Warning: Overwriting design file '/home/mclyu/test/t2/StallMux.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Decoder.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/PA42.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/adder322.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/IRS.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux5.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux1.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux31.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Add.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Judger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/I_mem.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/D_mem.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/JJrUJudger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/BranchJudger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/RegCondRster.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/FwdCtrler.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EqJduger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/JBHandler.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EdgeDetector.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/IF2IDWithStall.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/ID2EX.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EX2MEM.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/MEM2WB.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Regfile.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/rf32x32.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/PA4.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/adder32.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Ex_alu.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Shifter.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Adder.db'. (DDB-24)
+Loaded 32 designs.
+Current design is 'PcRegWithStall'.
+PcRegWithStall StallMux Decoder PA42 adder322 IRS Mux Mux5 Mux1 Mux31 Add Judger I_mem D_mem JJrUJudger BranchJudger RegCondRster FwdCtrler EqJduger JBHandler EdgeDetector IF2IDWithStall ID2EX EX2MEM MEM2WB Regfile rf32x32 PA4 adder32 Ex_alu Shifter Adder
+read_verilog top.v
+Loading verilog file '/home/mclyu/test/t2/top.v'
+Detecting input file type automatically (-rtl or -netlist).
+Opening include file ppl_datapath_test.v
+Opening include file pc_reg.v
+Opening include file defines.v
+Warning: Overwriting design file '/home/mclyu/test/t2/PcRegWithStall'. (DDB-24)
+Opening include file decoder.v
+Opening include file defines.v
+Opening include file other_modules.v
+Opening include file calcu2.v
+Opening include file if2id.v
+Opening include file defines.v
+Opening include file id2ex.v
+Opening include file defines.v
+Opening include file ex2mem.v
+Opening include file defines.v
+Opening include file mem2wb.v
+Opening include file defines.v
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/mclyu/test/t2/top.v
+Opening include file ppl_datapath_test.v
+Opening include file pc_reg.v
+Opening include file defines.v
+Opening include file decoder.v
+Opening include file defines.v
+Opening include file other_modules.v
+Opening include file calcu2.v
+Opening include file if2id.v
+Opening include file defines.v
+Opening include file id2ex.v
+Opening include file defines.v
+Opening include file ex2mem.v
+Opening include file defines.v
+Opening include file mem2wb.v
+Opening include file defines.v
+Opening include file rf32x32.v
+Opening include file regfile.v
+Opening include file ex_alu.v
+Opening include file defines.v
+Opening include file calcu.v
+Opening include file defines.v
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 66 in file
+		'pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pc_out_T_reg     | Flip-flop |  31   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    pc_out_T_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine PcRegWithStall line 80 in file
+		'pc_reg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pc_out__reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IRS line 13 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     in_dly_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine RegCondRster line 358 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     times_r_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 511 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       num_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       num_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine EdgeDetector line 521 in file
+		'other_modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pulse2_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine IF2IDWithStall line 81 in file
+		'if2id.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fcD_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      b2_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    pc_out_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     inst_or_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   is_jjru_or_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ID2EX line 158 in file
+		'id2ex.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|    typeb_pc_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     pc_wb_or_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  b_flag_cache_or_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    wr_width_or_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|  regalu_dataA_or_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   reg_dataB_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   imm_exten_or_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       rd_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs1_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      rs2_or_reg       | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     jjruF_or_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   reg_w_ctrl_or_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| reg_w_data_sel_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_read_ctrl_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| mem_write_ctrl_or_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    alu_ctrl_or_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| alu_dataB_sel_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| load_bneq_sig_or_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    bneqFlag_or_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     fcDbneq_o_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine EX2MEM line 47 in file
+		'ex2mem.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|  mem_write_ctrl_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       fcC_o_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     wr_width_o_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+| alu_dataCaddress_o_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      w_data_o_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg        | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    reg_w_ctrl_o_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  mem_read_ctrl_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine MEM2WB line 35 in file
+		'mem2wb.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|    reg_w_ctrl_o_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  reg_w_data_sel_o_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       pc_wb_o_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      r_data_o_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| r_data_o_tri_enable_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     alu_dataC_o_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rd_o_reg         | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|         c_o_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred tri-state devices in process
+	in routine MEM2WB line 35 in file
+		'mem2wb.v'.
+=================================================
+| Register Name |       Type       | Width | MB |
+=================================================
+| r_data_o_tri  | Tri-State Buffer |  32   | N  |
+=================================================
+Presto compilation completed successfully.
+Current design is now '/home/mclyu/test/t2/PcRegWithStall.db:PcRegWithStall'
+Warning: Overwriting design file '/home/mclyu/test/t2/StallMux.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Decoder.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/PA42.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/adder322.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/IRS.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux5.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux1.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Mux31.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Add.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Judger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/I_mem.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/D_mem.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/JJrUJudger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/BranchJudger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/RegCondRster.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/FwdCtrler.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EqJduger.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/JBHandler.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EdgeDetector.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/IF2IDWithStall.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/ID2EX.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/EX2MEM.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/MEM2WB.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Regfile.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/rf32x32.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/PA4.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/adder32.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Ex_alu.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Shifter.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/Adder.db'. (DDB-24)
+Warning: Overwriting design file '/home/mclyu/test/t2/PplDatapathTest.db'. (DDB-24)
+Loaded 34 designs.
+Current design is 'PcRegWithStall'.
+PcRegWithStall StallMux Decoder PA42 adder322 IRS Mux Mux5 Mux1 Mux31 Add Judger I_mem D_mem JJrUJudger BranchJudger RegCondRster FwdCtrler EqJduger JBHandler EdgeDetector IF2IDWithStall ID2EX EX2MEM MEM2WB Regfile rf32x32 PA4 adder32 Ex_alu Shifter Adder PplDatapathTest top
+current_design "top" 
+Current design is 'top'.
+{top}
+#read_verilog topmodule
+##current_design "TOP_MODULE_NAME"
+set_max_area 0
+1
+set_max_fanout 64 [current_design]
+Current design is 'top'.
+Information: Building the design 'Regfile' instantiated from design 'rf32x32' with
+	the parameters "32,32,0". (HDL-193)
+Warning: Cannot find the design 'Regfile' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Regfile' in 'rf32x32'. (LINK-5)
+1
+# Create Clock 
+create_clock -period 4.99 clkk 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_clock_uncertainty -setup 0.0 [get_clock clkk] 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_clock_uncertainty -hold 0.0 [get_clock clkk] 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_input_delay 0.0 -clock clkk [remove_from_collection [all_inputs] clkk] 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+set_output_delay 0.0 -clock clkk [remove_from_collection [all_outputs] clkk] 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+# Check if Clock is created 
+derive_clocks 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+create_clock find(port,"rst[0]")
+
+1
+# Start Logical Synthesis 
+compile 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | H-2013.03-DWBB_201303.2 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 523 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'D_mem'
+  Processing 'Mux_0'
+  Processing 'MEM2WB'
+  Processing 'EX2MEM'
+  Processing 'BranchJudger'
+  Processing 'FwdCtrler'
+  Processing 'Shifter'
+  Processing 'PA4_0'
+  Processing 'adder32'
+  Processing 'Adder'
+  Processing 'Ex_alu'
+  Processing 'Mux31_0'
+  Processing 'ID2EX'
+  Processing 'RegCondRster_0'
+  Processing 'PA42_0'
+  Processing 'adder322_0'
+  Processing 'Add_0'
+  Processing 'JJrUJudger'
+  Processing 'EqJduger'
+  Processing 'rf32x32'
+  Processing 'Mux1'
+  Processing 'Mux5'
+  Processing 'IRS'
+  Processing 'Decoder'
+  Processing 'IF2IDWithStall'
+  Processing 'StallMux'
+  Processing 'PcRegWithStall'
+  Processing 'PplDatapathTest'
+  Processing 'I_mem'
+  Processing 'top'
+Information: Building the design 'Regfile' instantiated from design 'rf32x32' with
+	the parameters "32,32,0". (HDL-193)
+Warning: Cannot find the design 'Regfile' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Regfile' in 'rf32x32'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'FwdCtrler_DW01_cmp6_0'
+  Processing 'FwdCtrler_DW01_cmp6_1'
+  Processing 'FwdCtrler_DW01_cmp6_2'
+  Processing 'FwdCtrler_DW01_cmp6_3'
+  Processing 'FwdCtrler_DW01_cmp6_4'
+  Processing 'FwdCtrler_DW01_cmp6_5'
+  Processing 'FwdCtrler_DW01_cmp6_6'
+  Processing 'FwdCtrler_DW01_cmp6_7'
+  Processing 'FwdCtrler_DW01_cmp6_8'
+  Processing 'FwdCtrler_DW01_cmp6_9'
+  Processing 'Shifter_DW01_ash_0'
+  Processing 'Shifter_DW01_ash_1'
+  Processing 'Shifter_DW01_sub_0'
+  Processing 'Shifter_DW_rash_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07  374507.5      1.32     172.6      10.3                          
+    0:00:07  374507.5      1.32     172.6      10.3                          
+    0:00:07  374507.5      1.32     172.6      10.3                          
+    0:00:07  374507.5      1.32     172.6      10.3                          
+    0:00:07  374507.5      1.32     172.6      10.3                          
+    0:00:08  248378.9      3.82     447.1       1.5                          
+    0:00:09  248778.2      3.69     417.2       1.4                          
+    0:00:09  249385.0      3.32     358.2       1.4                          
+    0:00:09  248985.6      3.15     371.9       1.4                          
+    0:00:09  249031.7      3.07     362.2       1.4                          
+    0:00:09  249292.8      3.02     336.8       1.4                          
+    0:00:09  249070.1      3.21     364.1       1.4                          
+    0:00:09  249208.3      3.02     344.1       1.4                          
+    0:00:09  248977.9      2.98     352.5       1.4                          
+    0:00:09  248939.5      3.09     359.3       1.4                          
+    0:00:09  249162.2      2.91     349.2       1.4                          
+    0:00:09  249415.7      2.80     337.7       1.4                          
+    0:00:10  249699.8      2.80     336.5       1.4                          
+    0:00:10  249738.2      2.80     336.4       1.4                          
+    0:00:10  249738.2      2.80     336.4       1.4                          
+    0:00:10  249730.6      2.80     336.4       1.4                          
+    0:00:10  249730.6      2.80     336.4       1.4                          
+    0:00:10  251543.0      2.77     332.8       0.9                          
+    0:00:10  252334.1      2.59     326.1       0.7                          
+    0:00:10  252779.5      2.59     326.1       0.5                          
+    0:00:10  253056.0      2.59     326.1       0.4                          
+    0:00:10  253286.4      2.59     326.1       0.3                          
+    0:00:10  253432.3      2.59     326.1       0.3                          
+    0:00:10  253632.0      2.59     326.1       0.2                          
+    0:00:10  253670.4      2.59     326.1       0.2                          
+    0:00:10  253670.4      2.59     326.1       0.2                          
+    0:00:10  253670.4      2.59     326.1       0.2                          
+    0:00:10  255951.4      1.90     260.7       0.7 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:10  256834.6      1.69     224.9       0.7 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:10  257856.0      1.59     218.6       0.8 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:11  258570.2      1.53     207.8       1.0 datapath/ex2mem/alu_dataCaddress_o_reg[26]/D
+    0:00:11  259276.8      1.47     201.9       1.0 datapath/pc_reg/pc_out_T_reg[18]/D
+    0:00:11  259852.8      1.40     188.5       1.0 datapath/pc_reg/pc_out_T_reg[18]/D
+    0:00:11  260713.0      1.33     181.1       1.0 datapath/pc_reg/pc_out_T_reg[18]/D
+    0:00:11  262118.4      1.25     171.6       1.1 datapath/pc_reg/pc_out_T_reg[1]/D
+    0:00:11  262494.7      1.23     170.1       1.1                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:11  262494.7      1.23     170.1       1.1                          
+    0:00:12  263831.0      1.14     155.4       1.1 datapath/ex2mem/alu_dataCaddress_o_reg[26]/D
+    0:00:12  264745.0      1.11     152.1       1.2 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:12  265551.4      1.05     142.5       1.2 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:12  266150.4      1.01     135.9       1.2 datapath/pc_reg/pc_out_T_reg[26]/D
+    0:00:12  266319.4      1.00     135.9       1.2 datapath/ex2mem/alu_dataCaddress_o_reg[26]/D
+    0:00:12  266426.9      0.99     134.3       1.2 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:12  266803.2      0.97     133.4       1.2 datapath/rster2/times_r_reg[0]/D
+    0:00:13  267025.9      0.96     130.6       1.2 datapath/rster2/times_r_reg[0]/D
+    0:00:13  267548.2      0.94     129.6       1.3 datapath/pc_reg/pc_out_T_reg[26]/D
+    0:00:13  268592.6      0.90     124.9       1.3 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:13  270343.7      0.86     115.4       1.3 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:13  270842.9      0.83     111.9       1.3 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:13  271280.6      0.81     110.1       1.3 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:14  271887.4      0.78     106.7       1.3 datapath/rster2/times_r_reg[0]/D
+    0:00:14  271987.2      0.76     104.9       1.2 datapath/rster2/times_r_reg[0]/D
+    0:00:14  272279.0      0.76     104.9       1.2 datapath/rster2/times_r_reg[0]/D
+    0:00:14  273239.0      0.74     102.6       1.3 datapath/pc_reg/pc_out_T_reg[26]/D
+    0:00:14  273592.3      0.74     102.3       1.3 datapath/rster2/times_r_reg[0]/D
+    0:00:14  273646.1      0.73     101.9       1.3 datapath/rster2/times_r_reg[0]/D
+    0:00:14  273561.6      0.73     101.7       1.2 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:14  274053.1      0.73     100.1       1.2 datapath/rster2/times_r_reg[0]/D
+    0:00:14  275589.1      0.71      97.1       1.3 datapath/pc_reg/pc_out_T_reg[25]/D
+    0:00:15  275896.3      0.71      96.3       1.3 datapath/pc_reg/pc_out_T_reg[30]/D
+    0:00:15  276579.8      0.69      95.6       1.3 datapath/pc_reg/pc_out_T_reg[15]/D
+    0:00:15  277324.8      0.68      94.1       1.3 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:15  277432.3      0.68      95.8       1.3 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:15  277801.0      0.66      94.3       1.3 datapath/pc_reg/pc_out_T_reg[26]/D
+    0:00:15  278231.0      0.66      94.4       1.3 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:15  278584.3      0.65      94.3       1.3 datapath/pc_reg/pc_out_T_reg[26]/D
+    0:00:15  278714.9      0.65      93.8       1.3 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:15  278899.2      0.64      92.6       1.3 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:15  279014.4      0.64      92.4       1.3 datapath/pc_reg/pc_out_T_reg[26]/D
+    0:00:15  278906.9      0.64      91.8       1.3 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:15  278922.2      0.63      90.5       1.3 datapath/pc_reg/pc_out_T_reg[30]/D
+    0:00:15  279191.0      0.62      90.3       1.3 datapath/pc_reg/pc_out_T_reg[26]/D
+    0:00:16  279559.7      0.61      90.2       1.3 datapath/pc_reg/pc_out_T_reg[30]/D
+    0:00:16  279759.4      0.60      88.1       1.3 datapath/pc_reg/pc_out_T_reg[22]/D
+    0:00:16  280174.1      0.60      87.6       1.3 datapath/pc_reg/pc_out_T_reg[30]/D
+    0:00:16  280166.4      0.60      87.6       1.3                          
+    0:00:16  279936.0      0.60      89.6       1.3                          
+
+
+  Beginning Design Rule Fixing  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:16  279936.0      0.60      89.6       1.3                          
+    0:00:16  281817.6      0.60      88.2       0.0 datapath/pcoreg_imm_add/adder/u7/net17878
+    0:00:16  282040.3      0.60      88.3       0.0 datapath/plus4_plusimm_mux/dataA[20]
+    0:00:16  282055.7      0.62      90.0       0.0 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:17  282132.5      0.61      90.5       0.0 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:17  282163.2      0.61      89.5       0.0 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:17  282462.7      0.60      89.0       0.0                          
+    0:00:17  282647.0      0.59      88.4       0.0                          
+    0:00:17  282808.3      0.59      87.6       0.0                          
+    0:00:17  282961.9      0.59      86.6       0.0                          
+    0:00:17  283453.4      0.59      85.8       0.0                          
+    0:00:17  283875.8      0.59      85.1       0.0                          
+    0:00:17  284474.9      0.59      83.4       0.0                          
+    0:00:17  284474.9      0.59      83.2       0.0                          
+    0:00:17  284582.4      0.59      82.9       0.0                          
+    0:00:18  284628.5      0.59      82.4       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:18  284628.5      0.59      82.4       0.0                          
+    0:00:18  284628.5      0.59      82.4       0.0                          
+    0:00:18  280366.1      0.60      79.8       0.0                          
+    0:00:18  279152.6      0.71      82.3       0.0                          
+    0:00:18  278446.1      0.71      82.3       0.0                          
+    0:00:18  278077.4      0.71      82.1       0.0                          
+    0:00:18  277877.8      0.71      82.1       0.0                          
+    0:00:18  277355.5      0.71      82.1       0.0                          
+    0:00:18  277178.9      0.71      82.1       0.0                          
+    0:00:18  277071.4      0.71      82.1       0.0                          
+    0:00:18  277071.4      0.71      82.1       0.0                          
+    0:00:18  277171.2      0.62      79.2       0.0 datapath/pc_reg/pc_out_T_reg[30]/D
+    0:00:18  277163.5      0.60      78.5       0.0 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:18  277163.5      0.60      78.5       0.0                          
+    0:00:19  272755.2      0.76     100.4       0.0                          
+    0:00:19  271334.4      0.79     103.0       0.0                          
+    0:00:19  271019.5      0.81     110.4       0.0                          
+    0:00:19  271019.5      0.81     110.4       0.0                          
+    0:00:19  271019.5      0.81     110.4       0.0                          
+    0:00:19  271019.5      0.81     110.4       0.0                          
+    0:00:19  271019.5      0.81     110.4       0.0                          
+    0:00:19  271019.5      0.81     110.4       0.0                          
+    0:00:19  271726.1      0.63      82.1       0.0 datapath/pc_reg/pc_out_T_reg[24]/D
+    0:00:19  271902.7      0.62      81.9       0.0 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:19  272156.2      0.62      82.0       0.0 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:20  281164.8      0.52      73.6       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:20  281333.8      0.52      72.5       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:20  281587.2      0.51      70.7       0.0                          
+    0:00:20  281449.0      0.51      70.7       0.0                          
+    0:00:20  280926.7      0.51      70.6       0.0                          
+    0:00:20  280842.2      0.51      70.6       0.0                          
+    0:00:20  280604.2      0.51      69.9       0.0                          
+    0:00:20  280028.2      0.51      69.2       0.0                          
+    0:00:20  279598.1      0.51      68.8       0.0                          
+    0:00:20  278937.6      0.51      68.8       0.0                          
+    0:00:20  278661.1      0.51      68.8       0.0                          
+    0:00:21  278415.4      0.50      68.7       0.0                          
+    0:00:21  278069.8      0.50      68.7       0.0                          
+    0:00:21  275381.8      0.68      83.0       0.0                          
+    0:00:21  274214.4      0.77      96.6       0.0                          
+    0:00:21  274060.8      0.77      96.6       0.0                          
+    0:00:21  274060.8      0.77      96.6       0.0                          
+    0:00:21  274060.8      0.77      96.6       0.0                          
+    0:00:21  274060.8      0.77      96.6       0.0                          
+    0:00:21  274060.8      0.77      96.6       0.0                          
+    0:00:21  274060.8      0.77      96.6       0.0                          
+    0:00:21  274951.7      0.51      70.9       0.0 datapath/pc_reg/pc_out_T_reg[25]/D
+    0:00:21  275512.3      0.50      67.7       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:21  276096.0      0.49      66.7       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:21  276265.0      0.49      66.5       0.0                          
+    0:00:21  276495.4      0.49      65.8       0.0                          
+    0:00:22  276641.3      0.48      65.2       0.0                          
+    0:00:22  277040.6      0.48      64.9       0.0                          
+    0:00:22  277225.0      0.48      64.7       0.0                          
+    0:00:22  277209.6      0.48      64.6       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:22  278085.1      0.47      62.5       0.0 datapath/ex2mem/alu_dataCaddress_o_reg[30]/D
+    0:00:22  278177.3      0.47      61.7       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:22  278684.2      0.46      60.5       0.0 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:22  279229.4      0.45      58.9       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:22  279790.1      0.45      58.7       0.0 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:22  280604.2      0.44      57.3       0.0 datapath/pc_reg/pc_out_T_reg[29]/D
+    0:00:22  280842.2      0.44      56.6       0.0 datapath/ex2mem/alu_dataCaddress_o_reg[30]/D
+    0:00:22  281057.3      0.43      57.1       0.0 datapath/pc_reg/pc_out_T_reg[28]/D
+    0:00:22  281164.8      0.43      56.9       0.0 datapath/ex2mem/alu_dataCaddress_o_reg[30]/D
+    0:00:23  281449.0      0.43      56.2       0.0                          
+Loading db file '/usr/local/lib/hit18-lib/kyoto_lib/synopsys/HIT018.db'
+
+  Optimization Complete
+  ---------------------
+1
+ungroup -all -flatten 
+Information: Building the design 'Regfile' instantiated from design 'rf32x32' with
+	the parameters "32,32,0". (HDL-193)
+Warning: Cannot find the design 'Regfile' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Regfile' in 'rf32x32'. (LINK-5)
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating graph... (UID-83)
+1
+compile -map_effort high -area_effort high -incremental_mapping 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Information: There are 163 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+Information: Building the design 'Regfile' instantiated from design 'top' with
+	the parameters "32,32,0". (HDL-193)
+Warning: Cannot find the design 'Regfile' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'Regfile' in 'top'. (LINK-5)
+
+  Updating timing information
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[31]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[31]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[30]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[30]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[29]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[29]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[28]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[28]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[27]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[27]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[26]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[26]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[25]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[25]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[24]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[24]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[23]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[23]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[22]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[22]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[21]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[21]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[20]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[20]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[19]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[19]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[18]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[18]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[17]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[17]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[16]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[16]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[15]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[15]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[14]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[14]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[13]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[13]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[12]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[12]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[11]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[11]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[10]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[10]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[9]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[9]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[8]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[8]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[7]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[7]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[6]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[6]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[5]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[5]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[4]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[4]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[3]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[3]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[2]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[2]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[1]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[1]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/pc_wb_o_reg[0]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/pc_wb_o_reg[0]' will be removed. (OPT-1207)
+Information: The register 'datapath/mem2wb/c_o_reg[0]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/c_o_reg[0]' will be removed. (OPT-1207)
+Information: The register 'datapath/ex2mem/wr_width_o_reg[2]' will be removed. (OPT-1207)
+Information: The register 'datapath/id2ex/wr_width_or_reg[2]' will be removed. (OPT-1207)
+Information: The register 'datapath/id2ex/fcDbneq_o_reg[0]' will be removed. (OPT-1207)
+Information: The register 'datapath/id2ex/b_flag_cache_or_reg[4]' will be removed. (OPT-1207)
+Information: The register 'datapath/id2ex/b_flag_cache_or_reg[5]' will be removed. (OPT-1207)
+Information: The register 'datapath/if2id/fcD_or_reg[0]' will be removed. (OPT-1207)
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+Information: The register 'datapath/rster1/times_r_reg[1]' is a constant and will be removed. (OPT-1206)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01  266104.3      0.88      69.1       7.6                          
+    0:00:01  266104.3      0.88      69.1       7.6                          
+    0:00:01  266104.3      0.88      69.1       7.6                          
+    0:00:01  265981.4      0.88      69.1       7.6                          
+    0:00:01  265981.4      0.88      69.1       7.6                          
+    0:00:01  258631.7      0.76      65.7       0.2                          
+    0:00:01  257026.6      0.72      64.3       0.1                          
+    0:00:01  256719.4      0.71      63.8       0.1                          
+    0:00:01  256719.4      0.71      63.8       0.1                          
+    0:00:01  256719.4      0.71      63.8       0.1                          
+    0:00:01  256719.4      0.71      63.8       0.1                          
+    0:00:01  256719.4      0.71      63.8       0.1                          
+    0:00:01  256796.2      0.71      63.8       0.0                          
+    0:00:01  257026.6      0.71      63.7       0.0                          
+    0:00:01  257118.7      0.71      63.7       0.0                          
+    0:00:01  257118.7      0.71      63.7       0.0                          
+    0:00:01  257118.7      0.71      63.7       0.0                          
+    0:00:01  257118.7      0.71      63.7       0.0                          
+    0:00:01  257118.7      0.71      63.7       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01  257118.7      0.71      63.7       0.0                          
+    0:00:02  259299.8      0.40      44.8       0.2 datapath/pc_reg/pc_out__reg[7]/D
+    0:00:02  260943.4      0.32      36.1       0.2 datapath/pc_reg/pc_out__reg[7]/D
+    0:00:02  262103.0      0.31      34.4       0.2 datapath/pc_reg/pc_out_T_reg[16]/D
+    0:00:02  262663.7      0.30      33.4       0.2 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:02  262970.9      0.29      31.1       0.3 datapath/pc_reg/pc_out__reg[7]/D
+    0:00:02  266979.8      0.28      30.4       0.3 datapath/ex2mem/alu_dataCaddress_o_reg[30]/D
+    0:00:02  267033.6      0.27      30.0       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:02  267640.3      0.26      28.7       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  268201.0      0.25      27.6       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  268093.4      0.25      27.4       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  268992.0      0.23      25.0       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  269644.8      0.22      24.0       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  269875.2      0.22      23.4       0.3 datapath/pc_reg/pc_out__reg[29]/D
+    0:00:03  269875.2      0.21      22.8       0.3 datapath/pc_reg/pc_out__reg[29]/D
+    0:00:03  270190.1      0.21      22.6       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  270766.1      0.20      21.4       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  271395.8      0.20      21.0       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:03  271987.2      0.19      19.0       0.3 datapath/pc_reg/pc_out__reg[29]/D
+    0:00:04  272256.0      0.19      18.8       0.3 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:04  272425.0      0.19      18.5       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:04  272555.5      0.18      18.1       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:04  273623.0      0.16      16.0       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:04  274828.8      0.14      14.1       0.4 datapath/pc_reg/pc_out_T_reg[27]/D
+    0:00:04  275051.5      0.13      13.7       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:04  275573.8      0.13      13.4       0.4 datapath/pc_reg/pc_out__reg[15]/D
+    0:00:04  276303.4      0.13      13.0       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:04  276311.0      0.12      12.8       0.4 datapath/ex2mem/alu_dataCaddress_o_reg[31]/D
+    0:00:05  276349.4      0.12      12.8       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:05  277209.6      0.12      12.1       0.4 datapath/pc_reg/pc_out__reg[30]/D
+    0:00:05  277501.4      0.11      10.8       0.4 datapath/pc_reg/pc_out__reg[30]/D
+    0:00:05  277793.3      0.11      10.7       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:05  277824.0      0.11      10.5       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:05  278123.5      0.10       9.6       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:05  278446.1      0.09       9.3       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:05  279037.4      0.09       8.3       0.4 datapath/pc_reg/pc_out__reg[2]/D
+    0:00:05  279206.4      0.09       7.3       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:05  279452.2      0.08       7.1       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:05  279920.6      0.08       7.0       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  280358.4      0.08       6.7       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  280849.9      0.07       6.4       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  280811.5      0.07       6.4       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  281172.5      0.07       6.3       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  281141.8      0.07       6.1       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  281364.5      0.07       5.9       0.4 datapath/pc_reg/pc_out_T_reg[1]/D
+    0:00:06  281487.4      0.07       5.9       0.4 datapath/pc_reg/pc_out_T_reg[3]/D
+    0:00:06  281487.4      0.07       5.9       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  281525.8      0.06       5.9       0.4 datapath/pc_reg/pc_out_T_reg[4]/D
+    0:00:06  281356.8      0.06       5.9       0.4 datapath/ex2mem/alu_dataCaddress_o_reg[31]/D
+    0:00:07  281786.9      0.06       5.5       0.4 datapath/ex2mem/alu_dataCaddress_o_reg[31]/D
+    0:00:07  281402.9      0.06       5.1       0.4 datapath/pc_reg/pc_out__reg[11]/D
+    0:00:07  281625.6      0.06       4.9       0.4 datapath/pc_reg/pc_out__reg[5]/D
+    0:00:07  281871.4      0.05       4.7       0.5 datapath/pc_reg/pc_out__reg[27]/D
+    0:00:07  281817.6      0.05       4.5       0.5 datapath/ex2mem/alu_dataCaddress_o_reg[31]/D
+    0:00:07  281725.4      0.05       4.3       0.4 datapath/if2id/b2_or_reg[0]/D
+    0:00:07  281940.5      0.05       4.2       0.4 datapath/ex2mem/alu_dataCaddress_o_reg[31]/D
+    0:00:07  282109.4      0.05       3.9       0.4 datapath/pc_reg/pc_out__reg[10]/D
+    0:00:07  282347.5      0.04       3.6       0.4 datapath/pc_reg/pc_out__reg[26]/D
+    0:00:07  282739.2      0.04       3.5       0.5 datapath/pc_reg/pc_out__reg[5]/D
+    0:00:07  283031.0      0.04       3.4       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:07  283207.7      0.04       3.2       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:08  283614.7      0.04       3.1       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:08  283829.8      0.04       3.1       0.5 datapath/pc_reg/pc_out__reg[8]/D
+    0:00:08  283814.4      0.04       3.1       0.5 datapath/pc_reg/pc_out_T_reg[13]/D
+    0:00:08  283822.1      0.04       3.0       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:08  283891.2      0.03       2.9       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:08  283952.6      0.03       2.8       0.5 datapath/pc_reg/pc_out__reg[9]/D
+    0:00:08  283975.7      0.03       2.8       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:08  284121.6      0.03       2.6       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:09  284144.6      0.03       2.6       0.5                          
+    0:00:09  284052.5      0.03       2.6       0.5 datapath/pc_reg/pc_out__reg[22]/D
+    0:00:09  284513.3      0.03       2.5       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:09  284344.3      0.03       2.3       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:09  284405.8      0.03       2.3       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:10  284290.6      0.03       2.2       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:10  284336.6      0.03       2.1       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:10  284267.5      0.02       2.0       0.5 datapath/ex2mem/alu_dataCaddress_o_reg[31]/D
+    0:00:10  283991.0      0.02       1.9       0.5 datapath/pc_reg/pc_out__reg[5]/D
+    0:00:10  284152.3      0.02       1.7       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:10  284060.2      0.02       1.6       0.5 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:10  283968.0      0.02       1.5       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:10  283760.6      0.02       1.3       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:11  283860.5      0.02       1.3       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:11  283806.7      0.02       1.3       0.5 datapath/pc_reg/pc_out_T_reg[17]/D
+    0:00:12  284021.8      0.02       1.3       0.5                          
+    0:00:15  284567.0      0.02       1.0       0.5                          
+    0:00:15  284682.2      0.01       0.6       0.5 datapath/ex2mem/alu_dataCaddress_o_reg[31]/D
+    0:00:15  284689.9      0.00       0.0       0.5 datapath/pc_reg/pc_out__reg[8]/D
+    0:00:15  284905.0      0.00       0.0       0.5 datapath/pc_reg/pc_out_T_reg[22]/D
+    0:00:15  284951.0      0.00       0.0       0.5                          
+    0:00:15  284951.0      0.00       0.0       0.5                          
+
+
+  Beginning Design Rule Fixing  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15  284951.0      0.00       0.0       0.5                          
+    0:00:15  284659.2      0.00       0.0       0.1 datapath/pcoreg_imm_add/adder/u7/n9
+    0:00:15  284682.2      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15  284682.2      0.00       0.0       0.0                          
+    0:00:15  284682.2      0.00       0.0       0.0                          
+    0:00:16  271910.4      0.14       7.0       0.0                          
+    0:00:16  270220.8      0.07       5.5       0.0                          
+    0:00:16  269675.5      0.07       5.5       0.0                          
+    0:00:16  269391.4      0.07       5.5       0.0                          
+    0:00:16  268938.2      0.07       5.5       0.0                          
+    0:00:16  268938.2      0.07       5.5       0.0                          
+    0:00:16  269583.4      0.04       2.4       0.0 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:16  269713.9      0.03       2.2       0.0 datapath/pc_reg/pc_out__reg[11]/D
+    0:00:16  269844.5      0.03       2.0       0.0 datapath/pc_reg/pc_out__reg[11]/D
+    0:00:16  270243.8      0.02       1.3       0.0 datapath/pc_reg/pc_out__reg[11]/D
+    0:00:17  270374.4      0.01       0.6       0.0 datapath/pc_reg/pc_out__reg[0]/D
+    0:00:17  270620.2      0.01       0.3       0.0 datapath/pc_reg/pc_out__reg[17]/D
+    0:00:17  271173.1      0.00       0.0       0.0                          
+    0:00:17  256458.2      0.53      33.0       0.0                          
+    0:00:17  253424.6      0.53      32.8       0.0                          
+    0:00:17  252526.1      0.53      33.8       0.0                          
+    0:00:17  252457.0      0.53      33.6       0.0                          
+    0:00:17  252457.0      0.53      33.6       0.0                          
+    0:00:17  252457.0      0.53      33.6       0.0                          
+    0:00:17  252457.0      0.53      33.6       0.0                          
+    0:00:17  252457.0      0.53      33.6       0.0                          
+    0:00:17  254100.5      0.12      10.7       0.0 datapath/pc_reg/pc_out_T_reg[31]/D
+    0:00:18  254407.7      0.10       8.3       0.0 datapath/pc_reg/pc_out__reg[5]/D
+    0:00:18  254638.1      0.09       7.9       0.0 datapath/pc_reg/pc_out__reg[2]/D
+    0:00:18  254976.0      0.09       7.9       0.0 datapath/pc_reg/pc_out__reg[4]/D
+    0:00:18  255022.1      0.08       8.0       0.0 datapath/pc_reg/pc_out__reg[4]/D
+    0:00:18  255083.5      0.08       8.0       0.0 datapath/pc_reg/pc_out__reg[4]/D
+    0:00:19  255129.6      0.08       7.9       0.0                          
+    0:00:19  254615.0      0.08       7.8       0.0                          
+    0:00:19  254361.6      0.08       7.8       0.0                          
+    0:00:19  254062.1      0.08       7.7       0.0                          
+    0:00:19  253409.3      0.08       7.6       0.0                          
+    0:00:20  253201.9      0.08       7.6       0.0                          
+    0:00:20  253178.9      0.08       7.6       0.0                          
+    0:00:20  250721.3      0.24      16.0       0.0                          
+    0:00:20  250360.3      0.24      15.7       0.0                          
+    0:00:20  250329.6      0.24      15.7       0.0                          
+    0:00:20  250329.6      0.24      15.7       0.0                          
+    0:00:20  250329.6      0.24      15.7       0.0                          
+    0:00:20  250329.6      0.24      15.7       0.0                          
+    0:00:20  250329.6      0.24      15.7       0.0                          
+    0:00:20  250329.6      0.24      15.7       0.0                          
+    0:00:20  250767.4      0.08       7.7       0.0                          
+    0:00:20  250759.7      0.08       7.7       0.0                          
+    0:00:21  250729.0      0.08       7.7       0.0                          
+    0:00:21  249884.2      0.08       7.7       0.0                          
+    0:00:21  248985.6      0.08       7.4       0.0                          
+    0:00:22  248425.0      0.09       7.7       0.0                          
+    0:00:22  248094.7      0.09       7.7       0.0                          
+    0:00:22  247610.9      0.21      11.8       0.0                          
+    0:00:22  247342.1      0.21      11.7       0.0                          
+    0:00:23  246865.9      0.21      11.8       0.0                          
+    0:00:23  246374.4      0.19      10.8       0.0                          
+    0:00:23  246228.5      0.19      10.8       0.0                          
+    0:00:23  246005.8      0.19      11.0       0.0                          
+    0:00:23  245767.7      0.19      11.0       0.0                          
+    0:00:23  245675.5      0.19      10.9       0.0                          
+    0:00:23  245614.1      0.19      10.9       0.0                          
+    0:00:23  245598.7      0.19      10.9       0.0                          
+    0:00:23  245545.0      0.19      10.9       0.0                          
+    0:00:23  245545.0      0.19      10.9       0.0                          
+    0:00:23  245545.0      0.19      10.9       0.0                          
+    0:00:24  243747.8      0.36      11.0       0.0                          
+    0:00:24  243179.5      0.36      12.9       0.0                          
+    0:00:24  243148.8      0.36      12.8       0.0                          
+    0:00:24  243148.8      0.36      12.8       0.0                          
+    0:00:24  243148.8      0.36      12.8       0.0                          
+    0:00:24  243148.8      0.36      12.8       0.0                          
+    0:00:24  243148.8      0.36      12.8       0.0                          
+    0:00:24  243148.8      0.36      12.8       0.0                          
+    0:00:24  244254.7      0.06       5.1       0.0 datapath/pc_reg/pc_out_T_reg[30]/D
+    0:00:24  245214.7      0.04       3.0       0.0                          
+    0:00:24  245898.2      0.04       2.5       0.0                          
+    0:00:24  246259.2      0.03       1.8       0.0                          
+    0:00:24  246735.4      0.02       1.5       0.0                          
+    0:00:24  247226.9      0.01       0.6       0.0                          
+    0:00:25  249891.8      0.01       0.2       0.0                          
+    0:00:25  250383.4      0.00       0.0       0.0                          
+    0:00:25  250383.4      0.00       0.0       0.0                          
+Loading db file '/usr/local/lib/hit18-lib/kyoto_lib/synopsys/HIT018.db'
+
+  Optimization Complete
+  ---------------------
+1
+# Check Design 
+check_design 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+check_design summary:
+Version:     H-2013.03-SP2
+Date:        Thu Jul  6 13:37:47 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      4
+    Multiply driven inputs (LINT-6)                                 1
+    Unconnected ports (LINT-28)                                     3
+
+Nets                                                                1
+    Multiply driven net with constant driver (LINT-54)              1
+
+Tristate                                                          114
+    A tristate bus has a non tri-state driver (LINT-34)            82
+    Single tristate driver drives an input pin (LINT-63)           32
+--------------------------------------------------------------------------------
+
+Warning: In design 'top', input port 'rst[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'top', port 'OINT_n[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'top', port 'OINT_n[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'top', port 'OINT_n[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'top', three-state bus 'n235' has non three-state driver 'U1411/**logic_0**'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rf/clk_inv' has non three-state driver 'datapath/rf/I_0/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs1[4]' has non three-state driver 'datapath/if2id/U94/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs1[3]' has non three-state driver 'datapath/if2id/U92/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs1[2]' has non three-state driver 'datapath/if2id/U90/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs1[1]' has non three-state driver 'datapath/if2id/U88/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs1[0]' has non three-state driver 'datapath/if2id/U86/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs2[4]' has non three-state driver 'datapath/if2id/U38/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs2[3]' has non three-state driver 'datapath/if2id/U36/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs2[2]' has non three-state driver 'datapath/if2id/U102/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs2[1]' has non three-state driver 'datapath/if2id/U98/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rs2[0]' has non three-state driver 'datapath/if2id/U96/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rd_muxed[4]' has non three-state driver 'datapath/init_mux1/U11/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rd_muxed[3]' has non three-state driver 'datapath/init_mux1/U7/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rd_muxed[2]' has non three-state driver 'datapath/init_mux1/U5/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rd_muxed[1]' has non three-state driver 'datapath/init_mux1/U9/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/rd_muxed[0]' has non three-state driver 'datapath/init_mux1/U3/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[31]' has non three-state driver 'datapath/init_mux2/U36/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[30]' has non three-state driver 'datapath/init_mux2/U34/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[29]' has non three-state driver 'datapath/init_mux2/U32/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[28]' has non three-state driver 'datapath/init_mux2/U30/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[27]' has non three-state driver 'datapath/init_mux2/U28/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[26]' has non three-state driver 'datapath/init_mux2/U26/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[25]' has non three-state driver 'datapath/init_mux2/U24/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[24]' has non three-state driver 'datapath/init_mux2/U22/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[23]' has non three-state driver 'datapath/init_mux2/U20/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[22]' has non three-state driver 'datapath/init_mux2/U18/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[21]' has non three-state driver 'datapath/init_mux2/U16/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[20]' has non three-state driver 'datapath/init_mux2/U52/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[19]' has non three-state driver 'datapath/init_mux2/U50/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[18]' has non three-state driver 'datapath/init_mux2/U56/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[17]' has non three-state driver 'datapath/init_mux2/U54/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[16]' has non three-state driver 'datapath/init_mux2/U48/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[15]' has non three-state driver 'datapath/init_mux2/U46/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[14]' has non three-state driver 'datapath/init_mux2/U60/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[13]' has non three-state driver 'datapath/init_mux2/U44/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[12]' has non three-state driver 'datapath/init_mux2/U42/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[11]' has non three-state driver 'datapath/init_mux2/U58/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[10]' has non three-state driver 'datapath/init_mux2/U12/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[9]' has non three-state driver 'datapath/init_mux2/U70/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[8]' has non three-state driver 'datapath/init_mux2/U14/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[7]' has non three-state driver 'datapath/init_mux2/U62/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[6]' has non three-state driver 'datapath/init_mux2/U38/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[5]' has non three-state driver 'datapath/init_mux2/U40/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[4]' has non three-state driver 'datapath/init_mux2/U8/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[3]' has non three-state driver 'datapath/init_mux2/U10/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[2]' has non three-state driver 'datapath/init_mux2/U68/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[1]' has non three-state driver 'datapath/init_mux2/U64/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/wb_data_muxed[0]' has non three-state driver 'datapath/init_mux2/U66/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'datapath/reg_w_ctrl_muxed[0]' has non three-state driver 'datapath/init_mux3/U1/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[0]' has non three-state driver 'd_mem/U75/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[1]' has non three-state driver 'd_mem/U76/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[2]' has non three-state driver 'd_mem/U77/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[3]' has non three-state driver 'd_mem/U78/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[4]' has non three-state driver 'd_mem/U79/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[5]' has non three-state driver 'd_mem/U80/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[6]' has non three-state driver 'd_mem/U81/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[7]' has non three-state driver 'd_mem/U82/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[8]' has non three-state driver 'd_mem/U83/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[9]' has non three-state driver 'd_mem/U84/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[10]' has non three-state driver 'd_mem/U85/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[11]' has non three-state driver 'd_mem/U86/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[12]' has non three-state driver 'd_mem/U87/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[13]' has non three-state driver 'd_mem/U88/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[14]' has non three-state driver 'd_mem/U89/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[15]' has non three-state driver 'd_mem/U90/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[16]' has non three-state driver 'd_mem/U91/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[17]' has non three-state driver 'd_mem/U92/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[18]' has non three-state driver 'd_mem/U93/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[19]' has non three-state driver 'd_mem/U94/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[20]' has non three-state driver 'd_mem/U95/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[21]' has non three-state driver 'd_mem/U96/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[22]' has non three-state driver 'd_mem/U97/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[23]' has non three-state driver 'd_mem/U98/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[24]' has non three-state driver 'd_mem/U99/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[25]' has non three-state driver 'd_mem/U100/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[26]' has non three-state driver 'd_mem/U101/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[27]' has non three-state driver 'd_mem/U102/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[28]' has non three-state driver 'd_mem/U103/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[29]' has non three-state driver 'd_mem/U104/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[30]' has non three-state driver 'd_mem/U105/Y'. (LINT-34)
+Warning: In design 'top', three-state bus 'DDT[31]' has non three-state driver 'd_mem/U106/Y'. (LINT-34)
+Warning: In design 'top', multiply-driven net 'n235' is driven by constant 0. (LINT-54)
+Warning: Net 'datapath/r_data_memwb[31]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[30]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[29]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[28]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[27]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[26]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[25]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[24]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[23]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[22]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[21]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[20]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[19]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[18]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[17]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[16]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[15]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[14]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[13]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[12]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[11]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[10]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[9]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[8]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'datapath/r_data_memwb[0]' has a single tri-state driver.  (LINT-63)
+1
+# Show results 
+#report_cell 
+report_area
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : top
+Version: H-2013.03-SP2
+Date   : Thu Jul  6 13:37:47 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    HIT018 (File: /usr/local/lib/hit18-lib/kyoto_lib/synopsys/HIT018.db)
+
+Number of ports:                          140
+Number of nets:                          4179
+Number of cells:                         4042
+Number of combinational cells:           3502
+Number of sequential cells:               540
+Number of macros/black boxes:               0
+Number of buf/inv:                        747
+Number of references:                     182
+
+Combinational area:             176747.521746
+Buf/Inv area:                    22694.400564
+Noncombinational area:           73635.840263
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                250383.362009
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+report_power
+Loading db file '/usr/local/lib/hit18-lib/kyoto_lib/synopsys/HIT018.db'
+Warning: Main library 'HIT018' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : top
+Version: H-2013.03-SP2
+Date   : Thu Jul  6 13:37:48 2023
+****************************************
+
+
+Library(s) Used:
+
+    HIT018 (File: /usr/local/lib/hit18-lib/kyoto_lib/synopsys/HIT018.db)
+
+
+Operating Conditions: TYPICAL   Library: HIT018
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+top                    8k                HIT018
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =   4.4459 mW   (43%)
+  Net Switching Power  =   5.8224 mW   (57%)
+                         ---------
+Total Dynamic Power    =  10.2684 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+Error: Either dynamic power or leakage power, in the library, is unitless. Unable to display complete power group summary. (PWR-799)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000               NA   (     N/A)
+memory             0.0000            0.0000            0.0000               NA   (     N/A)
+black_box          0.0000            0.0000            0.0000               NA   (     N/A)
+clock_network      3.0046            4.7879            0.0000               NA   (     N/A)
+register           1.2643            0.5435            0.0000               NA   (     N/A)
+sequential         0.0000            0.0000            0.0000               NA   (     N/A)
+combinational      0.1771            0.4908            0.0000               NA   (     N/A)
+--------------------------------------------------------------------------------------------------
+Total              4.4459 mW         5.8222 mW         0.0000               NA        
+1
+report_timing -net 
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+Design : top
+Version: H-2013.03-SP2
+Date   : Thu Jul  6 13:37:48 2023
+****************************************
+
+Operating Conditions: TYPICAL   Library: HIT018
+Wire Load Model Mode: top
+
+  Startpoint: datapath/rster2/times_r_reg[1]
+              (rising edge-triggered flip-flop clocked by clkk)
+  Endpoint: datapath/ex2mem/alu_dataCaddress_o_reg[2]
+            (rising edge-triggered flip-flop clocked by clkk)
+  Path Group: clkk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                8k                    HIT018
+
+  Point                                       Fanout      Incr       Path
+  --------------------------------------------------------------------------
+  clock clkk (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  datapath/rster2/times_r_reg[1]/C (HIT18DFRP020)         0.00       0.00 r
+  datapath/rster2/times_r_reg[1]/Q (HIT18DFRP020)         0.36       0.36 r
+  datapath/rster2/times_r[1] (net)              1         0.00       0.36 r
+  datapath/rster2/U8/Y (HIT18INVP040)                     0.05       0.41 f
+  datapath/rster2/n10 (net)                     3         0.00       0.41 f
+  datapath/rster2/U15/Y (HIT18AND3P080S)                  0.14       0.54 f
+  datapath/rst_n_idex[0] (net)                  4         0.00       0.54 f
+  U991/Y (HIT18AND2P020)                                  0.13       0.67 f
+  n103 (net)                                    2         0.00       0.67 f
+  U1184/Y (HIT18XOR2P015)                                 0.17       0.84 r
+  datapath/fwd_ctrler/n116 (net)                1         0.00       0.84 r
+  datapath/fwd_ctrler/U138/Y (HIT18AND3P020)              0.18       1.02 r
+  datapath/fwd_ctrler/n118 (net)                1         0.00       1.02 r
+  datapath/fwd_ctrler/U38/Y (HIT18AND2P080S)              0.15       1.18 r
+  datapath/fcB[0] (net)                         2         0.00       1.18 r
+  datapath/data_b_mux31/U59/Y (HIT18INVP040)              0.07       1.24 f
+  datapath/data_b_mux31/n39 (net)               6         0.00       1.24 f
+  U917/Y (HIT18AND2P040S)                                 0.12       1.36 f
+  n71 (net)                                     6         0.00       1.36 f
+  U1185/Y (HIT18AOI22P015)                                0.17       1.53 r
+  datapath/data_b_mux31/n34 (net)               1         0.00       1.53 r
+  U1019/Y (HIT18NAND2P015)                                0.14       1.68 f
+  datapath/data_b_muxed[4] (net)                3         0.00       1.68 f
+  U707/Y (HIT18NAND2P015)                                 0.09       1.76 r
+  n188 (net)                                    1         0.00       1.76 r
+  U705/Y (HIT18NAND2P020)                                 0.09       1.85 f
+  n196 (net)                                    1         0.00       1.85 f
+  U1255/Y (HIT18XOR2P020)                                 0.24       2.09 f
+  datapath/alu/adder/dataB[4] (net)             4         0.00       2.09 f
+  U1260/Y (HIT18AND2P020)                                 0.16       2.25 f
+  datapath/alu/adder/c_adder/u1/n4 (net)        2         0.00       2.25 f
+  datapath/alu/adder/c_adder/u1/U12/Y (HIT18NAND2P040S)
+                                                          0.06       2.31 r
+  datapath/alu/adder/c_adder/u1/n6 (net)        1         0.00       2.31 r
+  U184/Y (HIT18NAND2P040S)                                0.07       2.38 f
+  datapath/alu/adder/c_adder/u1/n11 (net)       1         0.00       2.38 f
+  U28/Y (HIT18NAND2P040S)                                 0.07       2.45 r
+  datapath/alu/adder/c_adder/u1/n18 (net)       2         0.00       2.45 r
+  U1075/Y (HIT18NAND3P060S)                               0.11       2.55 f
+  datapath/alu/adder/c_adder/carry[1] (net)     1         0.00       2.55 f
+  datapath/alu/adder/c_adder/u2/U31/Y (HIT18NAND3P080S)
+                                                          0.06       2.61 r
+  datapath/alu/adder/c_adder/u2/n10 (net)       2         0.00       2.61 r
+  U666/Y (HIT18NAND3P060S)                                0.10       2.71 f
+  datapath/alu/adder/c_adder/carry[2] (net)     2         0.00       2.71 f
+  datapath/alu/adder/c_adder/u3/U8/Y (HIT18INVP040)       0.07       2.78 r
+  datapath/alu/adder/c_adder/u3/n3 (net)        1         0.00       2.78 r
+  U1092/Y (HIT18AOI22P080S)                               0.08       2.86 f
+  datapath/alu/adder/c_adder/carry[3] (net)     3         0.00       2.86 f
+  U1093/Y (HIT18INVP040)                                  0.07       2.94 r
+  net28561 (net)                                1         0.00       2.94 r
+  U1309/Y (HIT18AOI22P080S)                               0.07       3.01 f
+  datapath/alu/adder/c_adder/carry[4] (net)     3         0.00       3.01 f
+  datapath/alu/adder/c_adder/u5/U18/Y (HIT18INVP040)      0.08       3.09 r
+  datapath/alu/adder/c_adder/u5/n18 (net)       2         0.00       3.09 r
+  U586/Y (HIT18AOI22P080S)                                0.08       3.17 f
+  datapath/alu/adder/c_adder/carry[5] (net)     3         0.00       3.17 f
+  datapath/alu/adder/c_adder/u6/U2/Y (HIT18AND2P040S)     0.11       3.28 f
+  datapath/alu/adder/c_adder/u6/n8 (net)        2         0.00       3.28 f
+  U614/Y (HIT18OAI21P060S)                                0.12       3.40 r
+  datapath/alu/adder/c_adder/u6/n33 (net)       1         0.00       3.40 r
+  U55/Y (HIT18AND2P080S)                                  0.15       3.55 r
+  datapath/alu/adder/c_adder/u6/n34 (net)       2         0.00       3.55 r
+  datapath/alu/adder/c_adder/u6/U4/Y (HIT18INVP020)       0.04       3.60 f
+  datapath/alu/adder/c_adder/u6/n2 (net)        1         0.00       3.60 f
+  U774/Y (HIT18NAND2P030S)                                0.07       3.67 r
+  datapath/alu/adder/c_adder/u6/n4 (net)        1         0.00       3.67 r
+  U1049/Y (HIT18NAND2P060S)                               0.08       3.75 f
+  datapath/alu/add_result_temp[26] (net)        2         0.00       3.75 f
+  U872/Y (HIT18NOR2P080S)                                 0.09       3.84 r
+  n125 (net)                                    1         0.00       3.84 r
+  U1048/Y (HIT18NAND4P060S)                               0.15       3.99 f
+  n123 (net)                                    1         0.00       3.99 f
+  U1066/Y (HIT18INVP040)                                  0.08       4.07 r
+  n115 (net)                                    3         0.00       4.07 r
+  U786/Y (HIT18AND4P020)                                  0.23       4.30 r
+  datapath/alu_zero[0] (net)                    1         0.00       4.30 r
+  U75/Y (HIT18AND2P080S)                                  0.15       4.46 r
+  n156 (net)                                    1         0.00       4.46 r
+  U84/Y (HIT18NOR2P080S)                                  0.04       4.49 f
+  datapath/branch_judger/n2 (net)               3         0.00       4.49 f
+  U83/Y (HIT18AND3P080S)                                  0.13       4.62 f
+  n10 (net)                                    11         0.00       4.62 f
+  datapath/data_pc_mux/U5/Y (HIT18MUX2P010)               0.21       4.83 f
+  datapath/computed_data[2] (net)               1         0.00       4.83 f
+  datapath/ex2mem/alu_dataCaddress_o_reg[2]/D (HIT18DFRP020)
+                                                          0.00       4.83 f
+  data arrival time                                                  4.83
+
+  clock clkk (rise edge)                                  4.99       4.99
+  clock network delay (ideal)                             0.00       4.99
+  datapath/ex2mem/alu_dataCaddress_o_reg[2]/C (HIT18DFRP020)
+                                                          0.00       4.99 r
+  library setup time                                     -0.16       4.83
+  data required time                                                 4.83
+  --------------------------------------------------------------------------
+  data required time                                                 4.83
+  data arrival time                                                 -4.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+write -hier -format verilog -output HOGEHOGE_PROC.vnet
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/home/mclyu/test/t2/HOGEHOGE_PROC.vnet'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write -hier -output HOGEHOGE_PROC.db    
+Warning: Design 'top' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing ddc file 'HOGEHOGE_PROC.db'.
+1
+quit
+Thank you...
