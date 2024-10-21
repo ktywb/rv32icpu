@@ -1,3 +1,3 @@
 # rv32icpu
 
-![img](diagram/rfig.jpg)
+![img](diagram/fig.jpg)
