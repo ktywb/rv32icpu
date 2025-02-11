@@ -13,8 +13,8 @@ module Mux (
     reg [31:0] temp;
     always @(*) begin
         //temp <= ( {32{!select}} & dataA ) | ( {32{ select}} & dataB );
-        temp <= (select == 1'b1) ? dataB : dataA;
-        dataC <= temp;
+        temp = (select == 1'b1) ? dataB : dataA;
+        dataC = temp;
     end
 endmodule   // endmoudle Mux
 
@@ -34,12 +34,12 @@ module Mux31 (
     reg [31:0] temp;
     always @(*) begin
         //temp <= (select == 1'b1) ? dataB : dataA;
-        temp <= ( {32{ select[1]}} & dataC ) 
+        temp = ( {32{ select[1]}} & dataC ) 
               | ( {32{~select[1]}} & ( ({32{ select[0]}} & dataB) 
                                      | ({32{~select[0]}} & dataA) 
                                      )
                );
-        dataD <= temp;
+        dataD = temp;
     end
 endmodule   // endmoudle Mux
 
@@ -58,7 +58,7 @@ module Add (
 );
     //assign {cout,dataC} = cin+ dataA+ dataB ;
     always @(*) begin
-        {cout,dataC} <= cin+ dataA+ dataB ;
+        {cout,dataC} = cin+ dataA+ dataB ;
     end
 endmodule   // endmodule Add
 
@@ -107,11 +107,11 @@ module Judger(
     assign we = luiF | auipcF;
 
     always @(*) begin
-        judge_a <= wa ;
-        judge_b <= wb ;
-        judge_c <= wc ;
-        judge_d <= wd ;
-        judge_e <= we ;
+        judge_a = wa ;
+        judge_b = wb ;
+        judge_c = wc ;
+        judge_d = wd ;
+        judge_e = we ;
     end
 endmodule   // endmodule Judger
 
@@ -161,10 +161,10 @@ module I_mem (
 
     // always @(negedge clk, posedge temp, negedge temp) begin        // opcode
     always @(*) begin        // opcode
-        is_jjru <= temp;  //  ? 1'b1 : 1'b0
-        is_j    <= type_j;
-        is_jr   <= type_jr;   //  ? 1'b1 : 1'b0
-        is_b    <= type_b;
+        is_jjru = temp;  //  ? 1'b1 : 1'b0
+        is_j    = type_j;
+        is_jr   = type_jr;   //  ? 1'b1 : 1'b0
+        is_b    = type_b;
     end
 endmodule   // endmodule I_mem
 
@@ -251,11 +251,11 @@ module JJrUJudger (
     assign we  = luiF | auipcF;
 
     always @(*) begin
-        judge_a  <= wa ;
-        judge_b1 <= wb1 ;
-        judge_d  <= wd ;
-        judge_e  <= we ;   
-        jjruF    <= (|jjru_flag_cache);     
+        judge_a  = wa ;
+        judge_b1 = wb1 ;
+        judge_d  = wd ;
+        judge_e  = we ;   
+        jjruF    = (|jjru_flag_cache);     
     end
 endmodule   // endmodule JJrU_Judger
 
@@ -297,9 +297,9 @@ module BranchJudger (
 
     // out
     always @(*) begin
-        typeb_pc_o <= typeb_pc_i;
-        judge_b2 <= wb2;
-        judge_c  <= wc;
+        typeb_pc_o = typeb_pc_i;
+        judge_b2 = wb2;
+        judge_c  = wc;
     end   
 endmodule   // endmodule Branch_Judger
 
@@ -319,13 +319,13 @@ module RegCondRster (
     reg  [1 :0 ] times_r;
 
     always @(posedge clk) begin
-        times_r = (ctrl_sig & (~(|times_r))) ? times : ({ ( times_r[1] & times_r[0] ), ( times_r[1] & (~times_r[0]) ) });
-        rst_n_o = rst_n_i & (~(|times_r));
+        times_r <= (ctrl_sig & (~(|times_r))) ? times : ({ ( times_r[1] & times_r[0] ), ( times_r[1] & (~times_r[0]) ) });
+        rst_n_o <= rst_n_i & (~(|times_r));
     end
 
     always @(rst_n_i == 1'b0) begin
-        times_r <= 2'b00;
-        rst_n_o <= rst_n_i ;
+        times_r = 2'b00;
+        rst_n_o = rst_n_i ;
     end
 endmodule   // endmodule RegCondRster
 
@@ -476,8 +476,8 @@ module JBHandler (
 
     // assign branch_dist = 
     always @(*) begin
-        jb <= is_j | b;
-        imm_exten <= {32{is_j}} & imm_exten_J
+        jb = is_j | b;
+        imm_exten = {32{is_j}} & imm_exten_J
                    | {32{  b }} & imm_exten_B;
     end
     
