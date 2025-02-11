@@ -15,7 +15,7 @@ module Pc_reg (
     reg [31:0] pc_in_r;
     reg init_done;
 
-    always @(*) pc_in_r <= {32{rst_n}} & pc_in;                       // save pc_in
+    always @(*) pc_in_r = {32{rst_n}} & pc_in;                       // save pc_in <=
 
     always @(posedge clk) begin
         if (!init_done) begin
@@ -55,7 +55,7 @@ module PcRegWithStall (
     reg init_done;
     reg f=1'b0;
 
-    always @(*) pc_in_r <= {32{rst_n}} & pc_in;                       // save pc_in
+    always @(*) pc_in_r = {32{rst_n}} & pc_in;                       // save pc_in <=
 
     always @(posedge clk or negedge rst_n or fcD == 1'b1) begin
         // if (!init_done) begin
