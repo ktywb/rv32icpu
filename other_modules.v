@@ -444,8 +444,8 @@ module EqJduger (
                   | bneqF[0] & (~is_equal);
 
     always @(*) begin
-        bneq <= result;
-        bneqF_o <= {2{ load_bneq_sig}} & bneqF
+        bneq = result;
+        bneqF_o = {2{ load_bneq_sig}} & bneqF
                  | {2{~load_bneq_sig}} & 2'b0;
     end
     
