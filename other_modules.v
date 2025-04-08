@@ -318,14 +318,14 @@ module RegCondRster (
 );
     reg  [1 :0 ] times_r;
 
-    always @(posedge clk) begin
-        times_r <= (ctrl_sig & (~(|times_r))) ? times : ({ ( times_r[1] & times_r[0] ), ( times_r[1] & (~times_r[0]) ) });
-        rst_n_o <= rst_n_i & (~(|times_r));
-    end
-
-    always @(rst_n_i == 1'b0) begin
-        times_r = 2'b00;
-        rst_n_o = rst_n_i ;
+    always @(posedge clk, negedge rst_n_i) begin
+	if(!rst_n_i) begin
+	    times_r = 2'b00;
+            rst_n_o = rst_n_i ;
+	end else begin
+	    times_r <= (ctrl_sig & (~(|times_r))) ? times : ({ ( times_r[1] & times_r[0] ), ( times_r[1] & (~times_r[0]) ) });
+            rst_n_o <= rst_n_i & (~(|times_r));
+	end
     end
 endmodule   // endmodule RegCondRster
 
