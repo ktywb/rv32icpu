@@ -129,11 +129,9 @@ module top_test;
       // if (FFFFF) begin
       // end
       $monitor($stime," \tPC: %h\trd: %d\tinst= %h\t\tDAD: %h\tDDT: %h\t %b%b %b\t", IAD, IDT[11:7], IDT, DAD, DDT,MREQ,WRITE,FFFFF);
-      //ここから2行はIcarus Verilog用(手元で動かすときに使ってください)
 
 	   $dumpfile("top_test.vcd");
       $dumpvars(0, u_top_1);
-	  //ここから2行はNC-Verilog用(woodblockで動かすときに使ってください)
       //$shm_open("waves.shm");
       //$shm_probe("AS");
    end
